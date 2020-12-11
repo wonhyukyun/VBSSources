@@ -5,9 +5,9 @@ function fPing( strComputer )
         dim strPingOut, flag
         set objShell = CreateObject("Wscript.Shell")
         set objPing = objShell.Exec("ping " & strComputer)
-    strPingOut = objPing.StdOut.ReadAll
-    if instr(LCase(strPingOut), "reply") then
-        flag = TRUE
+        strPingOut = objPing.StdOut.ReadAll
+        if instr(LCase(strPingOut), "reply") then
+                flag = TRUE
         else
                 flag = FALSE
         end if
